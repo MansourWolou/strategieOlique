@@ -18,15 +18,7 @@ public class View extends JFrame {
         this.pack();
         this.buildContentPane();
     }
-    /*
-    DONE:
-    TODO: add jButton on north
-    TODO: make the background black
-    TODO: display the text on center
-    TODO:
-    TODO:
 
-     */
     private void buildContentPane() {
         //put the layout with borderLayout
         JPanel panel = new JPanel();
@@ -34,12 +26,22 @@ public class View extends JFrame {
         this.getContentPane().add(panel);
         panel.setBackground(Color.decode("#151515"));
 
-        //
-        /*
+        //add jButton on north
+        //TODO: the button is not at the good size
         JButton button = new JButton();
-        button.setMinimumSize(new Dimension(300,300));
+        //button.setMinimumSize(new Dimension(300,300));
         panel.add(button,BorderLayout.NORTH);
-        */
+
+        //display the text on center
+        //TODO: the texte is'nt enough visible , change the color
+        //TODO: get the texte from controller only
+        JTextField txt = new JTextField();
+        txt.setEditable(false);
+        txt.setHorizontalAlignment(JTextField.CENTER);
+        txt.setFont(new Font(Font.MONOSPACED,Font.PLAIN,15));
+        txt.setText("return a resolt from Controller");
+        txt.setBackground(Color.decode("#151515"));
+        panel.add(txt,BorderLayout.CENTER);
 
     }
 }
