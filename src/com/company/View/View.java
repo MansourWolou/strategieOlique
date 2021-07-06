@@ -18,7 +18,15 @@ public class View extends JFrame {
         this.pack();
         this.buildContentPane();
     }
+    /*
+    TODO: put the layout with borderLayout
+    TODO: add jButton on north
+    TODO: make the background black
+    TODO: display the text on center
+    TODO:
+    TODO:
 
+     */
     private void buildContentPane() {
         JPanel panel = new JPanel();
         panel.setLayout((LayoutManager)null);
