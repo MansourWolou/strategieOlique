@@ -19,7 +19,7 @@ public class View extends JFrame {
         this.buildContentPane();
     }
     /*
-    TODO: put the layout with borderLayout
+    DONE:
     TODO: add jButton on north
     TODO: make the background black
     TODO: display the text on center
@@ -28,9 +28,18 @@ public class View extends JFrame {
 
      */
     private void buildContentPane() {
+        //put the layout with borderLayout
         JPanel panel = new JPanel();
-        panel.setLayout((LayoutManager)null);
+        panel.setLayout(new BorderLayout());
         this.getContentPane().add(panel);
         panel.setBackground(Color.decode("#151515"));
+
+        //
+        /*
+        JButton button = new JButton();
+        button.setMinimumSize(new Dimension(300,300));
+        panel.add(button,BorderLayout.NORTH);
+        */
+
     }
 }
