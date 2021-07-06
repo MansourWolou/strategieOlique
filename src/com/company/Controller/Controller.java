@@ -1,14 +1,18 @@
 package com.company.Controller;
 
 public class Controller {
-    /*
-    TODO:controlle the event click anywhere
-    TODO: click on the noth button
-    TODO: add content on the bd
-    TODO: delete the actual display
-    TODO: update the actuel text display
-    TODO:
 
+    public Controller(){
 
-     */
+    }
+    //controlle the event click anywhere
+    public void onClickAnyWhere(){};
+    //click on the noth button
+    public void onClickButton(){};
+    //add content on the bd
+    public void addContentOnBd(){};
+    //delete the actual display
+    public void deleteContentDisplay(){};
+    // update the actuel text display
+    public void updateContentDisplay(){};
 }
