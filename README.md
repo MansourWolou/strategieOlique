@@ -1,0 +1,2 @@
+# strategieOlique
+fgb wxdfnb dwf 
