@@ -13,9 +13,34 @@ public class Controller {
     //click on the noth button
     public void onClickButton(){};
     //add content on the bd
-    public void addContentOnBd(){};
+    public void addContentOnBd(String newData){
+        String req = "INSERT INTO quote (textImput) VALUES ("+"\'" + newData +"\'" +")";
+        System.out.println(req);
+        try {
+            Connection conn = this.connect();
+            Statement stmt = conn.createStatement();
+            int rs = stmt.executeUpdate(req);
+            System.out.println(rs);
+            conn.close();
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    };
     //delete the actual display
-    public void deleteContentDisplay(){};
+    public void deleteContentDisplay(){
+        String req = "DELETE FROM quote\n" +
+                "WHERE textImput = " +"\'" + displayedText+ "\'";
+        System.out.println(req);
+        try {
+            Connection conn = this.connect();
+            Statement stmt = conn.createStatement();
+            int rs = stmt.executeUpdate(req);
+            System.out.println(rs);
+            conn.close();
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    };
     // update the actuel text display
     public void updateContentDisplay(String updateTxt){
       //  System.out.println(updateTxt.toCharArray().toString()+'ur');
@@ -28,6 +53,7 @@ public class Controller {
             Statement stmt  = conn.createStatement();
             int rs    = stmt.executeUpdate(req);
             System.out.println(rs);
+            conn.close();
         }catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -68,7 +94,6 @@ public class Controller {
 
         Controller control = new Controller();
         control.getRandomText();
-        control.updateContentDisplay("coucou");
-
+        control.addContentOnBd("tjr moi");
     }
 }
