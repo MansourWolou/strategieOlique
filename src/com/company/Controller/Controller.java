@@ -8,8 +8,10 @@ public class Controller {
     public Controller(){
 
     }
-    //controlle the event click anywhere
-    public void onClickAnyWhere(){};
+    public String getDisplayedText(){
+        return this.displayedText;
+    }
+
     //click on the noth button
     public void onClickButton(){};
     //add content on the bd

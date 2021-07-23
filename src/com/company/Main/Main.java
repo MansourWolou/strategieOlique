@@ -11,7 +11,7 @@ public class Main {
                 new Runnable() {
                     @Override
                     public void run() {
-                        View view = new View("Strategie Oblique",800,800);
+                        View view = new View("Strategie Oblique",300,300);
                         view.setVisible(true);
                     }
                 }
